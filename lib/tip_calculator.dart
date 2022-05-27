@@ -17,6 +17,13 @@ class _TipCalculatorState extends State<TipCalculator> {
   double _total = 0.00;
   double _tipAmount = 0.00;
 
+  @override
+  void initState() {
+    // initialize the tip percentage to 15%
+    _tipPercentage.text = 15.0.toString();
+    super.initState();
+  }
+
   void _calculateTip() {
     // Convert the bill amount  and tip percentage to a double
     double bill = _bill.text.isNotEmpty ? double.parse(_bill.text) : 0.0;
